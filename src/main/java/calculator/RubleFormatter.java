@@ -3,7 +3,7 @@ package calculator;
 public class RubleFormatter {
     public String getFormatterRubles(double amount) {
         double roundedAmount = Math.floor(amount);
-        var preLastDigit = roundedAmount % 100 / 10;
+        int preLastDigit = (int) (roundedAmount % 100 / 10);
         if (preLastDigit == 1) {
             return "рублей";
         }
